@@ -1,0 +1,32 @@
+# Esquema Lógico e Queries SQL para Oficina Mecânica
+
+Este projeto consiste na criação de um esquema lógico para um banco de dados de uma oficina mecânica, seguido da implementação em SQL e criação de queries complexas para manipulação e recuperação de dados.
+
+## Esquema Lógico
+
+O esquema lógico inclui as seguintes tabelas:
+- **Cliente**: Armazena informações dos clientes.
+- **Veiculo**: Armazena informações dos veículos dos clientes.
+- **Servico**: Armazena os serviços oferecidos pela oficina.
+- **OrdemServico**: Registra as ordens de serviço.
+- **ItemOrdem**: Relaciona os serviços às ordens de serviço.
+
+## Queries SQL
+
+Foram criadas queries SQL que incluem:
+- Recuperação simples com SELECT.
+- Filtros com WHERE.
+- Atributos derivados.
+- Ordenação com ORDER BY.
+- Filtros de grupos com HAVING.
+- Junções entre tabelas.
+
+## Como Utilizar
+
+1. Execute o script SQL para criar o esquema do banco de dados.
+2. Insira dados de teste nas tabelas.
+3. Execute as queries SQL para recuperar e manipular os dados.
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
