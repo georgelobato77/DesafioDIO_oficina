@@ -1,0 +1,55 @@
+MODELO LÓGICO: OFICINA
+
+Tabelas:
+
+    Cliente
+    
+        cliente_id (PK)
+    
+        nome
+    
+        telefone
+    
+        email
+    
+    Veiculo
+    
+        veiculo_id (PK)
+    
+        cliente_id (FK)
+    
+        marca
+    
+        modelo
+    
+        ano
+    
+    Servico
+    
+        servico_id (PK)
+    
+        descricao
+    
+        preco
+    
+        OrdemServico
+    
+        ordem_id (PK)
+    
+        veiculo_id (FK)
+    
+        data_entrada
+    
+        data_saida
+    
+        status
+    
+    ItemOrdem
+    
+        item_id (PK)
+    
+        ordem_id (FK)
+    
+        servico_id (FK)
+    
+        quantidade
