@@ -1,0 +1,19 @@
+INSERT INTO Cliente (nome, telefone, email) VALUES
+('João Silva', '1234-5678', 'joao.silva@email.com'),
+('Maria Oliveira', '8765-4321', 'maria.oliveira@email.com');
+
+INSERT INTO Veiculo (cliente_id, marca, modelo, ano) VALUES
+(1, 'Ford', 'Fiesta', 2015),
+(2, 'Chevrolet', 'Onix', 2018);
+
+INSERT INTO Servico (descricao, preco) VALUES
+('Troca de óleo', 100.00),
+('Alinhamento', 80.00);
+
+INSERT INTO OrdemServico (veiculo_id, data_entrada, data_saida, status) VALUES
+(1, '2023-10-01', '2023-10-02', 'Concluído'),
+(2, '2023-10-03', NULL, 'Em andamento');
+
+INSERT INTO ItemOrdem (ordem_id, servico_id, quantidade) VALUES
+(1, 1, 1),
+(2, 2, 1);
