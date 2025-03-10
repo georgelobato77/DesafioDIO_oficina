@@ -1,0 +1,39 @@
+CREATE TABLE Cliente (
+    cliente_id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    telefone VARCHAR(15),
+    email VARCHAR(100)
+);
+
+CREATE TABLE Veiculo (
+    veiculo_id INT AUTO_INCREMENT PRIMARY KEY,
+    cliente_id INT,
+    marca VARCHAR(50) NOT NULL,
+    modelo VARCHAR(50) NOT NULL,
+    ano INT,
+    FOREIGN KEY (cliente_id) REFERENCES Cliente(cliente_id)
+);
+
+CREATE TABLE Servico (
+    servico_id INT AUTO_INCREMENT PRIMARY KEY,
+    descricao VARCHAR(200) NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL
+);
+
+CREATE TABLE OrdemServico (
+    ordem_id INT AUTO_INCREMENT PRIMARY KEY,
+    veiculo_id INT,
+    data_entrada DATE NOT NULL,
+    data_saida DATE,
+    status VARCHAR(50),
+    FOREIGN KEY (veiculo_id) REFERENCES Veiculo(veiculo_id)
+);
+
+CREATE TABLE ItemOrdem (
+    item_id INT AUTO_INCREMENT PRIMARY KEY,
+    ordem_id INT,
+    servico_id INT,
+    quantidade INT,
+    FOREIGN KEY (ordem_id) REFERENCES OrdemServico(ordem_id),
+    FOREIGN KEY (servico_id) REFERENCES Servico(servico_id)
+);
